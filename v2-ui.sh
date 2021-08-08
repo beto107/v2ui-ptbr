@@ -431,7 +431,7 @@ show_menu() {
 --- Traduzido por @Andley302 ---
   ${green}0.${plain} Sair do script
 ————————————————
-  ${green}1.${plain} Instale v2-ui
+  ${green}1.${plain} Instalar v2-ui
   ${green}2.${plain} Atualizar v2-ui
   ${green}3.${plain} Desinstalar v2-ui
 ————————————————
