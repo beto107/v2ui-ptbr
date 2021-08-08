@@ -25,3 +25,4 @@ chmod +x /usr/bin/v2-ui;
 clear;
 echo -e "${green}INSTALADOR V2-UI FINALIZADO!${plain}"
 echo -e "${plain}Use e comando v2-ui para abrir o menu${plain}"
+echo -e "${plain}Defina uma porta para acessar o painel gerenciador web${plain}"
