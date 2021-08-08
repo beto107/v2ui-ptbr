@@ -451,7 +451,7 @@ show_menu() {
  ${green}14.${plain} 一Instalar BBR (kernel mais recente)
  "
     show_status
-    echo && read -p "请输入选择 [0-14]: " num
+    echo && read -p "Selecione uma opção [0-14]: " num
 
     case "${num}" in
         0) exit 0
