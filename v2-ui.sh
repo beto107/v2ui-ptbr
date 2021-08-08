@@ -91,7 +91,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/Andley302/v2ui-ptbr/main/v2-ui.sh)
+    bash <(curl -Ls https://github.com/andley302/v2ui-ptbr/master/v2-ui.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -110,7 +110,7 @@ update() {
         fi
         return 0
     fi
-    bash <(curl -Ls https://raw.githubusercontent.com/Andley302/v2ui-ptbr/main/v2-ui.sh
+     bash <(curl -Ls https://github.com/andley302/v2ui-ptbr/master/v2-ui.sh)
     if [[ $? == 0 ]]; then
         echo -e "${green}A atualização está concluída e o painel foi reiniciado automaticamente ${plain}"
         exit
