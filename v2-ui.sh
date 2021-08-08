@@ -187,7 +187,7 @@ set_port() {
         before_show_menu
     else
         /usr/local/v2-ui/v2-ui setport ${port}
-        echo -e "Depois de configurar a porta,reinicie o painel e use a porta recém-configurada${green}${port}${plain} Painel de acesso"
+        echo -e "Depois de configurar a porta,reinicie o painel e use a porta recém-configurada ${green}${port}${plain} Painel de acesso"
         confirm_restart
     fi
 }
