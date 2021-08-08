@@ -445,8 +445,8 @@ show_menu() {
  ${green}10.${plain} Ver o status v2-ui
  ${green}11.${plain} Ver log v2-ui
 ————————————————
- ${green}12.${plain} Configure v2-ui para iniciar automaticamente após a inicialização
- ${green}13.${plain} Cancelar inicialização v2-ui automaticamente
+ ${green}12.${plain} Ativar a inicialização automática
+ ${green}13.${plain} Destivar a inicialização automática
 ————————————————
  ${green}14.${plain} 一Instalar BBR (kernel mais recente)
  "
