@@ -91,7 +91,9 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://github.com/andley302/v2ui-ptbr/master/v2-ui.sh)
+    cd /root && rm -rf v2-ui.sh
+	wget https://github.com/andley302/v2ui-ptbr/master/v2-ui.sh
+	chmod +x v2-ui.sh && ./v2-ui.sh
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -110,7 +112,9 @@ update() {
         fi
         return 0
     fi
-     bash <(curl -Ls https://github.com/andley302/v2ui-ptbr/master/v2-ui.sh)
+    cd /root && rm -rf v2-ui.sh
+	wget https://github.com/andley302/v2ui-ptbr/master/v2-ui.sh
+	chmod +x v2-ui.sh && ./v2-ui.sh
     if [[ $? == 0 ]]; then
         echo -e "${green}A atualização está concluída e o painel foi reiniciado automaticamente ${plain}"
         exit
@@ -364,7 +368,7 @@ show_status() {
     check_status
     case $? in
         0)
-            echo -e "Status do painel:${green}Está rodando${plain}"
+            echo -e "Status do painel:${green} Ativo${plain}"
             show_enable_status
             ;;
         1)
@@ -372,7 +376,7 @@ show_status() {
             show_enable_status
             ;;
         2)
-            echo -e "Status do painel:${red}Não instalado${plain}"
+            echo -e "Status do painel:${red} Não está instalado${plain}"
     esac
     show_xray_status
 }
@@ -380,9 +384,9 @@ show_status() {
 show_enable_status() {
     check_enabled
     if [[ $? == 0 ]]; then
-        echo -e "Se deve iniciar automaticamente após a inicialização:${green}Sim${plain}"
+        echo -e "Inicialização automática após reiniciar o sistema:${green} Ativado${plain}"
     else
-        echo -e "Se deve iniciar automaticamente após a inicialização:${red}Não${plain}"
+        echo -e "Inicialização automática após reiniciar o sistema: ${red}Desativado${plain}"
     fi
 }
 
@@ -398,9 +402,9 @@ check_xray_status() {
 show_xray_status() {
     check_xray_status
     if [[ $? == 0 ]]; then
-        echo -e "Status xray:${green}Rodando!${plain}"
+        echo -e "Status xray:${green} Ativo${plain}"
     else
-        echo -e "ttatus xray:${red}Parado!${plain}"
+        echo -e "ttatus xray:${red} Desativado!${plain}"
     fi
 }
 
@@ -439,7 +443,7 @@ show_menu() {
   ${green}8.${plain} Parar v2-ui
   ${green}9.${plain} Reiniciar v2-ui
  ${green}10.${plain} Ver o status v2-ui
- ${green}11.${plain}Ver log v2-ui
+ ${green}11.${plain} Ver log v2-ui
 ————————————————
  ${green}12.${plain} Configure v2-ui para iniciar automaticamente após a inicialização
  ${green}13.${plain} Cancelar inicialização v2-ui automaticamente
